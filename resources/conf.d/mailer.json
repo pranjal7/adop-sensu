@@ -1,0 +1,18 @@
+{
+    "mailer" :  {
+        "admin_gui" : "https://domain.com/sensu",
+        "mail_from": "sensu-alerts@somedomain.com",
+        "mail_to": "user@userdomain.com",
+        "delivery_method": "smtp",
+        "smtp_address": "mailserverFullDomain",
+        "smtp_port": "25",
+        "smtp_domain": "FullDomain",
+        "smtp_enable_starttls_auto": "true"
+    },
+    "handlers": {
+        "mailer": {
+            "type": "pipe",
+            "command": "/opt/sensu/embedded/bin/handler-mailer.rb"
+        }
+    }
+}
