@@ -3,8 +3,8 @@ FROM sstarcher/sensu:0.26.5
 # Enable Embedded Ruby
 RUN sed -i -r 's/EMBEDDED_RUBY=false/EMBEDDED_RUBY=true/' /etc/default/sensu
 
-# Install Mailer 2.5.4
-RUN /opt/sensu/embedded/bin/gem install mail --version 2.5.4
+# Install Sensu-Mailer-Plugin 2.0.1
+RUN /opt/sensu/embedded/bin/gem install sensu-plugins-mailer --version 2.0.1
 RUN /opt/sensu/embedded/bin/gem install aws-ses
 
 # Bake config & checks in
